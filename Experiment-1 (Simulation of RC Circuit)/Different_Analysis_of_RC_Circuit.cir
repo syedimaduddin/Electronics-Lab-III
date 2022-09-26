@@ -1,0 +1,47 @@
+* Syed Imaduddin_20ELB124
+
+
+* ----------------------------------------
+* AC analysis for RC circuit
+
+Vin 1 0 AC 5v
+R 1 2 1k
+C 2 0 10nf
+.AC DEC 100 10Hz 10MegHz
+.probe
+.end
+
+* ----------------------------------------
+
+* Sine wave transient analysis for RC circuit
+
+*Vin 1 0 sin(0 10v 1kHz)
+*R 1 2 1k
+*C 2 0 10nf
+*.tran 10us 2ms
+*.probe
+*.end
+
+* ----------------------------------------
+
+* Square wave transient analysis for RC circuit
+
+*PULSE(V1 V2 TimeDelay TimeRise TimeFall PulseWidth PERiod)
+*Vin 1 0 PULSE(-5v +5v 0 1ns 1ns 1ms 4ms)
+*R 1 2 1k
+*C 2 0 50nf
+*.tran 10us 2ms
+*.probe
+*.end
+
+* ----------------------------------------
+
+* DC Analysis with two resistances
+*Vin 1 0 DC 10v
+*R1 1 2 10k
+*R2 2 0 30k
+**.DC lin Vin 0 10v 1v
+*.OP
+*.probe
+*.end
+
