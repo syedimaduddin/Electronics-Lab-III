@@ -1,0 +1,8 @@
+* Analysis and Simulation of MOS Current Mirror
+
+VDD 2 0 DC 5v
+R 1 2 1k
+M1 1 1 0 0 NMOS12 W=5u L=1u
+.MODEL NMOS12 NMOS(kp=100u VTO=0.4)
+.OP
+.END
